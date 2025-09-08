@@ -1,0 +1,46 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.inputs {
+  display: flex;
+  gap: 5px;
+  height: 20px;
+  padding: 15px;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  height: 30px;
+  padding: 15px;
+}
+
+.botoes button {
+  border: none;
+  background-color: rgb(70, 70, 255);
+  color: white;
+  border-radius: 5px;
+}
+
+.botoes button:hover{
+  background-color: black;
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.botoes button:active{
+  border: 1px solid black;
+}

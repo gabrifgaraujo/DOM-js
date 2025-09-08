@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form>
+    <div class="inputs">
+        <label for="nome">Digite o nome do seu item: </label>
+        <input type="text" id="nome">
+        <label for="regiao">Digite a origem de seu item</label>
+        <input type="text" id="regiao">
+    </div>
+    <div class="botoes">
+        <button type="button" onclick="addElement()">Adicionar Elemento</button>
+        <button type="button" onclick="removeLastItem()">Excluir Última linha</button>
+        <button type="button" onclick="clearList()">Limpar Lista</button>
+    </div>
+
+    <label for="search">Digite o item a ser achado: </label><br>
+    <input type="text" id="search"><br><br>
+    <button type="button" onclick="searchElement()">Procurar Produtos</button>
+</form>
+<br><br>
+
+ <table>
+  <tr>
+    <th>Nome do produto</th>
+    <th>Região do produto</th>
+  </tr>
+  <tr>
+    <td>Item 1</td>
+    <td>Região 1</td>
+  </tr>
+  <tr>
+    <td>Item 2</td>
+    <td>Região 2</td>
+  </tr>
+</table>
+
+
+
+
+    <script src="main.js"></script> 
+</body>
+</html>
