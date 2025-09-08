@@ -26,8 +26,8 @@ function addElement(){
 }
 
 function removeLastItem(){
-    Itens.shift()
-    Itens.shift()
+    Itens.pop()
+    Itens.pop()
     console.log(Itens)
     const nomesLista = document.getElementById("nomeItemAdicionado")
     const regiaoLista = document.getElementById("regiaoItemAdicionado")
@@ -36,15 +36,13 @@ function removeLastItem(){
 }
 
 function clearList(){
-    const antigaLinha = document.getElementById("novaLinhaAdicionada")
     for(let i=0;i<Itens.length;i--){
         if(Itens.length < 1){
             break
         }else {
-            if(antigaLinha){
-                antigaLinha.remove()
-                Itens.pop()
-            }
+            const antigaLinha = document.getElementById("novaLinhaAdicionada")
+            antigaLinha.remove()
+            Itens.pop()
         }
     }
     console.log(Itens) 

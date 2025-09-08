@@ -1,31 +1,43 @@
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
+html {
+  font-family: Roboto, sans-serif;
   width: 100%;
+  padding: 10px;
+  justify-content: center;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+form {
+  border-radius: 5px;
+  height: 19rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 25rem;
+  background-color: rgb(0, 127, 255);
+  color: white;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
+.inputsIniciais {
+  font-size: large;
 
-.inputs {
-  display: flex;
-  gap: 5px;
   height: 20px;
   padding: 15px;
 }
 
+.inputsIniciais {
+  display: block;
+}
+
 .botoes {
-  display: flex;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  margin-top: 10rem;
+  font-size: 12rem;
   gap: 10px;
   height: 30px;
-  padding: 15px;
 }
 
 .botoes button {
@@ -43,4 +55,22 @@ tr:nth-child(even) {
 
 .botoes button:active{
   border: 1px solid black;
+}
+
+
+
+
+table {
+  border-collapse: collapse;
+  
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
