@@ -1,4 +1,41 @@
 const Itens = []
+
+function update(){
+    const nomeItens = document.getElementById("nome")
+    const regiaoItens = document.getElementById("regiao")
+    const novaLinha = document.createElement("tr")
+    const novaColunaNome = document.createElement("td")
+    const novaColunaRegiao = document.createElement("td")
+    const valorNome = nomeItens.value
+    const valorRegiao = regiaoItens.value
+    let antigoNome
+    let antigaRegiao
+    novaColunaNome.textContent = valorNome
+    novaLinha.className = "odd:bg-gray-900 even:bg-gray-800 border-gray-700"
+    novaColunaNome.className = "px-6 py-4"
+    novaColunaRegiao.className = "px-6 py-4"
+    novaColunaRegiao.textContent = valorRegiao
+    novaColunaNome.id = "nomeItemAdicionado"
+    novaColunaRegiao.id = "regiaoItemAdicionado"
+    novaLinha.id = "novaLinhaAdicionada"
+    document.querySelector("table").appendChild(novaLinha)
+    novaLinha.appendChild(novaColunaNome)
+    novaLinha.appendChild(novaColunaRegiao)
+
+    Itens.push([valorNome,valorRegiao])
+    antigoNome = valorNome
+    antigaRegiao = valorRegiao
+    console.log(Itens)
+
+    for(let i=0;i<=Itens.length;i++){
+        nomesLista.remove()
+        regiaoLista.remove()
+    }
+    console.log("lista atualizada")
+
+    
+}
+
 function addElement(){
     const nomeItens = document.getElementById("nome")
     const regiaoItens = document.getElementById("regiao")
@@ -10,6 +47,9 @@ function addElement(){
     let antigoNome
     let antigaRegiao
     novaColunaNome.textContent = valorNome
+    novaLinha.className = "odd:bg-gray-900 even:bg-gray-800 border-gray-700"
+    novaColunaNome.className = "px-6 py-4"
+    novaColunaRegiao.className = "px-6 py-4"
     novaColunaRegiao.textContent = valorRegiao
     novaColunaNome.id = "nomeItemAdicionado"
     novaColunaRegiao.id = "regiaoItemAdicionado"
@@ -18,15 +58,13 @@ function addElement(){
     novaLinha.appendChild(novaColunaNome)
     novaLinha.appendChild(novaColunaRegiao)
 
-    Itens.push(valorNome)
-    Itens.push(valorRegiao)
+    Itens.push([valorNome,valorRegiao])
     antigoNome = valorNome
     antigaRegiao = valorRegiao
     console.log(Itens)
 }
 
 function removeLastItem(){
-    Itens.pop()
     Itens.pop()
     console.log(Itens)
     const nomesLista = document.getElementById("nomeItemAdicionado")

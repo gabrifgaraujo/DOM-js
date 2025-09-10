@@ -5,46 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários HTML</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="bg-black">
+<form class="flex mt-20 items-center justify-center h-90%">
+  <div class="space-y-12">
+    <div class="inputsIniciais mb-5 border-b border-white/10 pb-12">
+      <h1 class="text-base/7 font-semibold text-white text-center mb-10">Excel do Paraguai</h1>
+      <div class="sm:col-span-3">
+        <label for="nome" class="block text-sm/6 font-medium text-white">Digite o nome do seu item: </label>
+        <div class="mt-2">
+          <input type="text" id="nome" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+        </div>
+      </div>
+      
+      <div class="sm:col-span-3 ">
+        <label for="regiao" class="block text-sm/6 font-medium text-white">Digite a origem de seu item: </label>
+        <input type="text" id="regiao" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+      </div>
 
-<form>
-    <div class="inputsIniciais">
-        <label for="nome">Digite o nome do seu item: </label><br>
-        <input type="text" id="nome"><br>
-        <label for="regiao">Digite a origem de seu item</label><br>
-        <input type="text" id="regiao"><br>
-            <label for="search">Digite o item a ser achado: </label>
-            <input type="text" id="search">
+      <div class="sm:col-span-3">
+        <label for="search" class="block text-sm/6 font-medium text-white">Digite o item a ser achado: </label>
+        <input type="text" id="search" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+      </div>
+
     </div>
 
-    <div class="botoes">
-        <button type="button" onclick="addElement()">Adicionar Elemento</button>
-        <button type="button" onclick="removeLastItem()">Excluir Última linha</button>
-        <button type="button" onclick="clearList()">Limpar Lista</button>
-        <button type="button" onclick="searchElement()">Procurar Produtos</button>
+    <div class="botoes mt-6 flex items-center justify-end gap-x-6">
+        <button type="button" onclick="addElement()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900 ">Adicionar Elemento</button>
+        <button type="button" onclick="removeLastItem()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900">Excluir Última linha</button>
+        <button type="button" onclick="clearList()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900">Limpar Lista</button>
+        <button type="button" onclick="searchElement()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900">Procurar Produtos</button>
     </div>
-
+  </div>
 
 </form>
-
- <table>
-  <tr>
-    <th>Nome do produto</th>
-    <th>Região do produto</th>
-  </tr>
-  <tr>
-    <td>Item 1</td>
-    <td>Região 1</td>
-  </tr>
-  <tr>
-    <td>Item 2</td>
-    <td>Região 2</td>
-  </tr>
-</table>
-
-
-
+<div class="mt-10 relative overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-400">
+    <thead class="text-xs text-gray-400 uppercase bg-gray-700">
+      <tr>
+        <th scope="col" class="px-6 py-3">Nome do produto</th>
+        <th scope="col" class="px-6 py-3">Região do produto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="odd:bg-gray-900 even:bg-gray-800 border-gray-700">
+        <td class="px-6 py-4">Item 1</td>
+        <td class="px-6 py-4">Região 1</td>
+      </tr>
+      <tr class="bg-gray-800 border-b border-gray-700">
+        <td class="px-6 py-4">Item 2</td>
+        <td class="px-6 py-4">Região 2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
     <script src="main.js"></script> 
 </body>
