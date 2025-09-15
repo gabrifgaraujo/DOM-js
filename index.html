@@ -35,28 +35,22 @@
         <button type="button" onclick="addElement()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900 ">Adicionar Elemento</button>
         <button type="button" onclick="removeLastItem()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900">Excluir Última linha</button>
         <button type="button" onclick="clearList()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900">Limpar Lista</button>
-        <button type="button" onclick="searchElement()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900">Procurar Produtos</button>
+        <button type="button" onclick="update()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900">Atualizar Tabela</button>
     </div>
   </div>
 
 </form>
-<div class="mt-10 relative overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left rtl:text-right text-gray-400">
+<div class="mt-10 flex overflow-hidden rounded-md items-center justify-center shadow-md ">
+  <table class="excel w-130 text-sm text-left rtl:text-right text-gray-400 ">
     <thead class="text-xs text-gray-400 uppercase bg-gray-700">
       <tr>
+        <th scope="col" class="px-6 py-3">ID</th>
         <th scope="col" class="px-6 py-3">Nome do produto</th>
         <th scope="col" class="px-6 py-3">Região do produto</th>
       </tr>
     </thead>
     <tbody>
-      <tr class="odd:bg-gray-900 even:bg-gray-800 border-gray-700">
-        <td class="px-6 py-4">Item 1</td>
-        <td class="px-6 py-4">Região 1</td>
-      </tr>
-      <tr class="bg-gray-800 border-b border-gray-700">
-        <td class="px-6 py-4">Item 2</td>
-        <td class="px-6 py-4">Região 2</td>
-      </tr>
+
     </tbody>
   </table>
 </div>
