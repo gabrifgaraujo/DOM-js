@@ -8,45 +8,82 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-black">
-<form class="flex mt-20 items-center justify-center h-90%">
-  <div class="space-y-12">
-    <div class="inputsIniciais mb-5 border-b border-white/10 pb-12">
-      <h1 class="text-base/7 font-semibold text-white text-center mb-10">Excel do Paraguai</h1>
-      <div class="sm:col-span-3">
-        <label for="nome" class="block text-sm/6 font-medium text-white">Digite o nome do seu item: </label>
-        <div class="mt-2">
-          <input type="text" id="nome" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+<form class="flex mt-6 items-center justify-center h-90%">
+
+  <div class="space-y-12 block">
+    <h1 class="text-base/7 font-black text-white text-center mb-10 tracking-wider mb-5 text-xl">Formulário de Registro de Produtos</h1>
+
+    <div class="inputsIniciais -mb-10 grid grid-cols-9 gap-4 border-white/10 pb-12">
+      <div class="sm:col-span-3 w-50">
+        <label for="nome" class="block text-sm/6 font-medium text-white w-50">Digite o nome do seu item: </label>
+        <div class="mt-2 w-50">
+          <input type="text" id="nome" class="block rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 w-50">
+        </div>
+      </div>
+
+      <div class="sm:col-span-3 w-50">
+        <label for="preco" class="block text-sm/6 font-medium text-white w-50 w-50">Digite o preço do seu item: </label>
+        <div class="mt-2 w-50">
+          <input type="number" id="preco" class="block rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 w-50">
+        </div>
+      </div>
+
+      <div class="sm:col-span-3 w-50">
+        <label for="categoria" class="block text-sm/6 font-medium text-white w-50">Digite a categoria do seu item: </label>
+        <div class="mt-2 w-50">
+          <input type="text" id="categoria" class="block rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 w-50">
+        </div>
+      </div>
+
+      <div class="sm:col-span-3 w-50">
+        <label for="regiao" class="block text-sm/6 font-medium text-white w-50">Digite a origem do seu item: </label>
+        <div class="mt-2 w-50">
+          <input type="text" id="regiao" class="block rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 w-50">
+        </div>
+      </div>
+
+      <div class="sm:col-span-3 w-50">
+        <label for="lote" class="block text-sm/6 font-medium text-white w-50">Digite o lote do seu item: </label>
+        <div class="mt-2 w-50">
+          <input type="text" id="lote" class="block rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 w-50">
         </div>
       </div>
       
-      <div class="sm:col-span-3 ">
-        <label for="regiao" class="block text-sm/6 font-medium text-white">Digite a origem de seu item: </label>
-        <input type="text" id="regiao" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
-      </div>
-
-      <div class="sm:col-span-3">
-        <label for="search" class="block text-sm/6 font-medium text-white">Digite o item a ser achado: </label>
-        <input type="text" id="search" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+      <div class="sm:col-span-3 w-50">
+        <label for="validade" class="block text-sm/6 font-medium text-white w-60">Digite a data de validade: </label>
+        <div class="mt-2 w-50">
+          <input type="datetime-local" id="validade" class="block rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 w-50">
+        </div>
       </div>
 
     </div>
 
-    <div class="botoes mt-6 flex items-center justify-end gap-x-6">
+    <div class="botoes mt-6 flex items-center justify-center gap-x-6 -mb-5">
         <button type="button" onclick="addElement()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900 ">Adicionar Elemento</button>
+
         <button type="button" onclick="removeLastItem()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900">Excluir Última linha</button>
+
         <button type="button" onclick="clearList()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900">Limpar Lista</button>
+
         <button type="button" onclick="update()" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white focus-visible:outline-2 focus-visible-offset-2 focus-visible:outline-indigo-500 hover:bg-indigo-900">Atualizar Tabela</button>
+
     </div>
+
   </div>
 
 </form>
 <div class="mt-10 flex overflow-hidden rounded-md items-center justify-center shadow-md ">
-  <table class="excel w-130 text-sm text-left rtl:text-right text-gray-400 ">
+  <table class="excel w-130 text-sm text-left mb-5 rtl:text-right text-gray-400 ">
     <thead class="text-xs text-gray-400 uppercase bg-gray-700">
       <tr>
         <th scope="col" class="px-6 py-3">ID</th>
-        <th scope="col" class="px-6 py-3">Nome do produto</th>
-        <th scope="col" class="px-6 py-3">Região do produto</th>
+        <th scope="col" class="px-6 py-3">Nome</th>
+        <th scope="col" class="px-6 py-3">Preço</th>
+        <th scope="col" class="px-6 py-3">Categoria</th>
+        <th scope="col" class="px-6 py-3">Origem</th>
+        <th scope="col" class="px-6 py-3">Lote</th>
+        <th scope="col" class="px-6 py-3">Data de Validade</th>
+        <th scope="col" class="px-6 py-3">Editar</th>
       </tr>
     </thead>
     <tbody>
