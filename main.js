@@ -1,8 +1,10 @@
 const Itens = []
-let contadorID = 1
+let contadorID = 0
 function addElement(){
+    console.clear()
     let antigoNome
     let antigaRegiao
+    const corpoTabela = document.querySelector("tbody")
     const nomeItens = document.getElementById("nome")
     const regiaoItens = document.getElementById("regiao")
     const novaLinha = document.createElement("tr")
@@ -32,7 +34,7 @@ function addElement(){
     novaColunaRegiao.id = "regiaoItemAdicionado"
     novaLinha.id = "novaLinhaAdicionada"
 
-    document.querySelector("table").appendChild(novaLinha)
+    corpoTabela.appendChild(novaLinha)
     novaLinha.appendChild(novaLinhaID)
     novaLinha.appendChild(novaColunaNome)
     novaLinha.appendChild(novaColunaRegiao)
@@ -44,15 +46,15 @@ function addElement(){
 }
 
 function removeLastItem(){
-    console.log(Itens)
-    const linhaAtual = novaLinhaAdicionada[novaLinhaAdicionada.length-1]
+    console.clear()
+    const linhaAtual = document.querySelector("tbody").lastChild
     linhaAtual.remove()
     Itens.pop()
-    console.log(contadorID)
-    contadorID-1
+    contadorID--
 }
 
 function clearList(){
+    console.clear()
     for(let i=0;i<Itens.length;i--){
         if(Itens.length < 1){
             break
@@ -60,13 +62,14 @@ function clearList(){
             const linhaAtual = document.getElementById("novaLinhaAdicionada")
             linhaAtual.remove()
             Itens.pop()
-            contadorID = 1
+            contadorID--
         }
     }
     console.log(Itens) 
 }
 
 function update(){
+    
     for(let i=0;i<Itens.length;i++){
         console.log(Itens)
         const linhaCriada = document.getElementById("novaLinhaAdicionada")
