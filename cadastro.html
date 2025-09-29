@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black">
+
+<div class="container mx-auto p-6">
+    <h1 class="text-2xl font-bold text-white text-center mb-6">Formulário de Registro de Produtos</h1>
+
+    <form class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div>
+                <label for="nome" class="block text-sm font-medium text-gray-300">Nome do item:</label>
+                <input type="text" id="nome" class="mt-1 block w-full rounded-md bg-white/5 px-3 py-2 text-white outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <div>
+                <label for="preco" class="block text-sm font-medium text-gray-300">Preço do item:</label>
+                <input type="number" id="preco" class="mt-1 block w-full rounded-md bg-white/5 px-3 py-2 text-white outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <div>
+                <label for="categoria" class="block text-sm font-medium text-gray-300">Categoria:</label>
+                <input type="text" id="categoria" class="mt-1 block w-full rounded-md bg-white/5 px-3 py-2 text-white outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <div>
+                <label for="regiao" class="block text-sm font-medium text-gray-300">Origem:</label>
+                <input type="text" id="regiao" class="mt-1 block w-full rounded-md bg-white/5 px-3 py-2 text-white outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <div>
+                <label for="lote" class="block text-sm font-medium text-gray-300">Lote:</label>
+                <input type="text" id="lote" class="mt-1 block w-full rounded-md bg-white/5 px-3 py-2 text-white outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+
+            <div>
+                <label for="validade" class="block text-sm font-medium text-gray-300">Data de Validade:</label>
+                <input type="date" id="validade" class="mt-1 block w-full rounded-md bg-white/5 px-3 py-2 text-white outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+        </div>
+
+        <div class="mt-8 flex items-center justify-center gap-x-6">
+            <button type="button" onclick="addElement( )" class="rounded-md bg-indigo-500 px-4 py-2 text-base font-semibold text-white hover:bg-indigo-600">
+                Adicionar Produto
+            </button>
+            <a href="lista.html" class="rounded-md bg-gray-700 px-4 py-2 text-base font-semibold text-white hover:bg-gray-600">
+                Ver Lista
+            </a>
+        </div>
+    </form>
+</div>
+
+<script src="main.js"></script> 
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black">
+
+<div class="container mx-auto p-6">
+    <h1 class="text-2xl font-bold text-white text-center mb-6">Lista de Produtos Cadastrados</h1>
+
+    <div class="flex justify-center gap-4 mb-6">
+        <a href="cadastro.html" class="rounded-md bg-indigo-500 px-4 py-2 font-semibold text-white hover:bg-indigo-600">
+            Cadastrar Novo Produto
+        </a>
+        <a href="index.html" class="rounded-md bg-gray-700 px-4 py-2 font-semibold text-white hover:bg-gray-600">
+            Voltar para a Página Inicial
+        </a>
+    </div>
+
+    <div class="overflow-x-auto rounded-lg shadow-md">
+        <table class="w-full text-sm text-left text-gray-300">
+            <thead class="text-xs text-gray-400 uppercase bg-gray-800">
+                <tr>
+                    <th scope="col" class="px-6 py-3">ID</th>
+                    <th scope="col" class="px-6 py-3">Nome</th>
+                    <th scope="col" class="px-6 py-3">Preço</th>
+                    <th scope="col" class="px-6 py-3">Categoria</th>
+                    <th scope="col" class="px-6 py-3">Origem</th>
+                    <th scope="col" class="px-6 py-3">Lote</th>
+                    <th scope="col" class="px-6 py-3">Validade</th>
+                    <th scope="col" class="px-6 py-3">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- As linhas da tabela serão inseridas aqui pelo main.js -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="main.js"></script> 
+</body>
+</html>
